@@ -20,7 +20,7 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 140, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1809603648306179640}
-    m_Position: {x: 20, y: 240, z: 0}
+    m_Position: {x: -30, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6965684121230904459}
     m_Position: {x: 320, y: 350, z: 0}
@@ -127,13 +127,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: speedV
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
