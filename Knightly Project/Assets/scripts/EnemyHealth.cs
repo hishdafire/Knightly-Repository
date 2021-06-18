@@ -1,42 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
 
 
-    public int startingHealth;
+    public int health;
+    public string winScene;
 
-    int currentHealth;
-
-    void Awake()
+    public void TakeDamage(int damage)
     {
-        currentHealth = startingHealth;
+        health -= damage;
+        Debug.Log(damage + " damage taken");
+
+
     }
-
-    public void HealthChange(int changeAmount)
+    
+    void Update()
     {
-        currentHealth = currentHealth + changeAmount;
-
-        currentHealth = Mathf.Clamp(currentHealth, 0, startingHealth);
-
-        if (currentHealth == 0)
+        if(health    <= 0)
         {
-            Kill();
+            Destroy(gameObject);
+            SceneManager.LoadScene(winScene);
         }
     }
+    
 
 
-
-    public void Kill()
-    {
-        Destroy(gameObject);
-    }
-
-    public int GetHealth()
-    {
-        return currentHealth;
-    }
 
 }

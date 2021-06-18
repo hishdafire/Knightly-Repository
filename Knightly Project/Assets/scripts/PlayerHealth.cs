@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
 
  
     public int startingHealth;
+    public string gameOverScene;
 
     int currentHealth;
 
@@ -32,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
     public void Kill()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene(gameOverScene);
     }
 
     public int GetHealth()
